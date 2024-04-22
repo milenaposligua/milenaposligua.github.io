@@ -10,7 +10,7 @@
     "lint": "next lint",
     "export": "next export",
     "build-ssg": "next build && touch .next/.nojekyll",
-    "deploy": "gh-pages -d .next -t true"
+    "deploy": "gh-pages -d .next"
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
