@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["_app-pages-browser_app_locales_es_json"],{
+
+/***/ "(app-pages-browser)/./app/locales/es.json":
+/*!*****************************!*\
+  !*** ./app/locales/es.json ***!
+  \*****************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = JSON.parse('{"hero_title":"ASISTENTE DE COMUNICACIÓN Y ADMINISTRACIÓN","about_title":"Hola, soy Milena Posligua.","about_desc":"ASISTENTE DE COMUNICACIÓN Y ADMINISTRACIÓN","about_text":"Apasionada de la psicología y el diseño gráfico, encuentro un equilibrio entre mi fascinación por comprender la mente humana y mi creatividad en el diseño visual. Mis habilidades en tareas de oficina y comunicación pública son notables, lo que me permite gestionar eficientemente diversas responsabilidades. Además, los dispositivos móviles y las redes sociales son herramientas esenciales en mi vida, utilizándolas para mantenerme conectada y actualizada en un mundo digital en constante evolución.","cv_badge_text":"UN PROBLEMA ES UNA OPORTUNIDAD PARA QUE DES LO MEJOR DE TI","cv_title":"Formación y experiencias","cv_text":"Con una sólida formación en ventas, atención al cliente y sistemas informáticos, y amplia experiencia en funciones como dependienta, cuidadora y empresaria de belleza. Estoy preparada para convertir los problemas en oportunidades y dar lo mejor de mí en cualquier reto.","cv_linkedin_text1":"Visita mi ","cv_linkedin_title":"Linkedin","cv_linkedin_text2":" para más información.","cv_edu_title":"Educación","cv_edu_badge":"Educación","cv_edu_formation_title_1":"PFI de Ventas publicas y atencion al cliente, marketing","cv_edu_formation_desc_1":"Instituto publico Provençana","cv_edu_formation_title_2":"Educación secundaria (eso)","cv_edu_formation_desc_2":"Escuela de adultos, CFA Cornella","cv_edu_formation_title_3":"Grado medio de sistemas microinformáticos y redes","cv_edu_formation_desc_3":"Instituto Esteve Terradas, Cornella de Llobregat","cv_edu_formation_title_4":"Bachillerato","cv_edu_formation_desc_4":"Instituto Esteve Terradas, Cornella de Llobregat","cv_work_title":"Experiencia","cv_work_badge":"Trabajo","cv_work_formation_title_1":"Asistente de ventas en Pull & Bear","cv_work_formation_title_2":"Cuidadora de niños","cv_work_formation_title_3":"Cuidadora de ancianos","cv_work_formation_title_4":"Tareas de limpieza del hogar","cv_work_formation_title_5":"Cocinera - Camarera en Restaurante","cv_work_formation_title_6":"Dependienta en Clarel","cv_work_formation_title_7":"Empresaria en venta de productos de belleza","contact_title":"Saludame!","mail_hover":"Enviame un correo","linkendin_hover":"Visita mi Linkedin","nav_about":"Perfil","sound_title_ON":"Activado","sound_title_OFF":"Desactivado","language_title":"Idioma","theme_title":"Tema","connect_title":"Conectar","unvailable_title":"N/D"}');
+
+/***/ })
+
+}]);
