@@ -107,18 +107,16 @@ export const Navbar = () => {
           className={` top-[4.5rem] left-0 right-0 bottom-0  static flex  bg-transparent transition-colors`}
         >
           <div className="relative z-2 flex flex-row items-end justify-center m-auto lg:flex-row ">
-            <Dropdown backdrop="blur"
+            <Dropdown  backdrop="blur"
               classNames={{
 
                 base: "before:lg:bg-n-1/0",
                 content: "p-0 rounded-lg bg-transparent overflow-hidden shadow-none",
               }}
             >
-              <DropdownTrigger>
-                <button className="bg-transparent outline-none">
+              <DropdownTrigger disabled={false}>
+                <button className="bg-transparent outline-none" disabled={false}>
                   <ButtonParallax
-                  // handleMouseOver={handleMouseOver}
-                  // handleMouseOut={handleMouseOut}
                   >
                     <Icon icon="solar:remote-controller-minimalistic-line-duotone" width="1.5em" height="1.5em" />
                   </ButtonParallax>
@@ -155,6 +153,7 @@ export const Navbar = () => {
 
             {content.map((item) => (
               <Popover
+              key={item.id}
               classNames={{
                 base: "before:bg-[#181818]",
                 content: "bg-[#181818]",

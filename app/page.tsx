@@ -24,10 +24,8 @@ export default function Page(){
   const cursorVisible = useRef(true);
   const cursorEnlarged = useRef(false);
 
-  const endX = useRef(window.innerWidth / 2);
-  const endY = useRef(window.innerHeight / 2);
-  const _x = useRef(0);
-  const _y = useRef(0);
+  const endX = useRef(0);
+  const endY = useRef(0);
 
   const requestRef = useRef<number | null>(null);
 
@@ -39,6 +37,12 @@ export default function Page(){
 
 
   useEffect(() => {
+
+    if (typeof window !== 'undefined') { // Verificar si window está definido
+      endX.current = window.innerWidth / 2;
+      endY.current = window.innerHeight / 2;
+    }
+
       // document.addEventListener('mousedown', mouseOverEvent);
       // document.addEventListener('mouseup', mouseOutEvent);
       document.addEventListener('mousemove', mouseMoveEvent);

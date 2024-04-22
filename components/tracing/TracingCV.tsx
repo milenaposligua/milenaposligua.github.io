@@ -46,16 +46,19 @@ export const TracingCV = ({handleMouseOver, handleMouseOut, handleCursorTextShow
       {translate("cv_text")}
       </p>
 
-      <span className="text-n-1/70 text-left md:text-center w-full">{translate("cv_linkedin_text1")} <a
-      onMouseOver={() => {
-        handleMouseOver();
-        handleCursorTextShow(true, translate("linkendin_hover"));
-      }}
-      onMouseLeave={() => {
-        handleMouseOut();
-        handleCursorTextShow(false, "");
-      }}
-      className="font-bold text-[--red-accent]" href="">{translate("cv_linkedin_title")} </a> {translate("cv_linkedin_text2")} </span>
+      <a
+  onMouseOver={() => {
+    handleMouseOver();
+    handleCursorTextShow(true, translate("linkendin_hover"));
+  }}
+  onMouseLeave={() => {
+    handleMouseOut();
+    handleCursorTextShow(false, "");
+  }}
+  className="font-bold text-[--red-accent]"
+>
+  {translate("cv_linkedin_title")}
+</a>
       </div>
     <TracingBeam className="px-6">
 

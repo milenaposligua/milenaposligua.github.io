@@ -15,7 +15,13 @@ export const useSelectedTheme = () => {
 }
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [selectedTheme, setSelectedTheme] = useState(() => localStorage.getItem('theme') || 'red');
+
+  const [selectedTheme, setSelectedTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'red';
+    }
+    return 'red';
+  });
 
   useEffect(() => {
     const applyTheme = () => {
@@ -48,8 +54,10 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     applyTheme();
+    if (typeof window !== 'undefined' && window.localStorage) {
 
-    localStorage.setItem('theme', selectedTheme);
+      localStorage.setItem('theme', selectedTheme);
+    }
   }, [selectedTheme]);
 
   return (

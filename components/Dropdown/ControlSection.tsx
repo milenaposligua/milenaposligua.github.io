@@ -95,7 +95,7 @@ export const LanguageSectionButtons = () => {
   useEffect(() => {
     changeLanguage(selectedTab);
     localStorage.setItem('language', selectedTab)
-  }, [selectedTab])
+  }, [changeLanguage, selectedTab])
 
   const handleChangeLanguage = (newLanguage: string) => {
 

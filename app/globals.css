@@ -99,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
   @apply rotate-[-360deg]
 }
 
+.transform-div {
+  transform: translate(0, 0);
+  scale: 1;
+}
+
 .effect{
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
 }

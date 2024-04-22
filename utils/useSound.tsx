@@ -1,7 +1,5 @@
 "use client"
-
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import {Howl, Howler} from 'howler';
 
 const SoundContext = createContext<any>(null);
 
@@ -12,17 +10,30 @@ export const useSoundContext = () => {
 export const SoundProvider = ({ children }: { children: React.ReactNode}) => {
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [soundReady, setSoundReady] = useState(false);
-  const soundFile = new Audio('/Hover.mp3');
+  const [soundFile, setSoundFile] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    soundFile.addEventListener('canplaythrough', () => {
-      setSoundReady(true);
-    });
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const audio = new Audio('/Hover.mp3');
+      audio.addEventListener('canplaythrough', () => {
+        setSoundReady(true);
+      });
+      setSoundFile(prevSoundFile => {
+        if (prevSoundFile) {
+          prevSoundFile.removeEventListener('canplaythrough', () => {
+            setSoundReady(false);
+          });
+        }
+        return audio;
+      });
+    }
 
     return () => {
-      soundFile.removeEventListener('canplaythrough', () => {
-        setSoundReady(false);
-      });
+      if (soundFile) {
+        soundFile.removeEventListener('canplaythrough', () => {
+          setSoundReady(false);
+        });
+      }
     };
   }, []);
 
@@ -30,10 +41,8 @@ export const SoundProvider = ({ children }: { children: React.ReactNode}) => {
     setSoundEnabled(!soundEnabled);
   };
 
-
-
   const playSoundOnHover = () => {
-    if (soundEnabled && soundReady) {
+    if (typeof window !== 'undefined' && window.localStorage && soundEnabled && soundReady && soundFile) {
       soundFile.play();
     }
   };

@@ -52,11 +52,11 @@ export const ButtonParallax: React.FC<ButtonParallaxProps> = ({children, onClick
   }, [])
 
   return (
-    <button onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}  onMouseEnter={playSoundOnHover} className="relative" onClick={onClick}>
+    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}  onMouseEnter={playSoundOnHover} className="relative" onClick={onClick}>
       <div ref={buttonRef} className="relative z-10 hover:bg-n-1/10 rounded-xl hover:shadow-lg mr-2 flex items-center justify-center p-2 text-white font-bold text-xl transition-property">
         {children}
       </div>
-    </button>
+    </div>
   )
 }
 
@@ -101,11 +101,11 @@ export const ButtonParallaxTransparent: React.FC<ButtonParallaxProps> = ({childr
   }, [])
 
   return (
-    <button onMouseEnter={playSoundOnHover} className="relative w-full h-full" onClick={onClick}>
+    <div onMouseEnter={playSoundOnHover} className="relative w-full h-full" onClick={onClick}>
       <div ref={buttonRef} className={cn(`relative z-10 rounded-xl flex items-center justify-center p-2 text-white font-bold text-xl transition-property
       `, className)}>
         {children}
       </div>
-    </button>
+    </div>
   )
 }

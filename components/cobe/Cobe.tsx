@@ -66,7 +66,7 @@ export const Cobe = () => {
       return () => globe.destroy()
     }
 
-  }, [])
+  }, [r])
 
 
   function hexToRgb(hex: string): [number, number, number]{

@@ -17,8 +17,11 @@ export const useSelectedTranslation = () => {
 
 export const TranslationProvider = ({ children }: { children: React.ReactNode }) => {
   const [language, setLanguage] = useState(() => {
-    const storedLanguage = localStorage.getItem('language');
-    return storedLanguage ? storedLanguage : 'en';
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      return storedLanguage ? storedLanguage : 'en';
+    }
+    return 'en';
   });
   const [translations, setTranslations] = useState<any>({});
 
