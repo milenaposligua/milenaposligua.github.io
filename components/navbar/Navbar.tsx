@@ -190,7 +190,7 @@ export const Navbar = () => {
 
           <HamburgerMenu />
         </nav>
-        <div className="absolute right-0 px-5 md:px-20 ">
+        {/* <div className="absolute right-0 px-5 md:px-20 "> */}
           {/* <Button
             className="ml-auto lg:hidden"
             px="px-3"
@@ -198,7 +198,7 @@ export const Navbar = () => {
           >
             <MenuSvg openNavigation={openNavigation} />
           </Button> */}
-        </div>
+        {/* </div> */}
 
 
       </div>

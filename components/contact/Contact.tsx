@@ -44,7 +44,7 @@ export const Contact = ({ handleMouseOver, handleMouseOut, handleCursorTextShow 
               }}
               className="text-center text-3xl md:text-5xl text-n-1/30" href="mailto:posliguamilena@gmail.com">posliguamilena@gmail.com</motion.a>
           </div>
-          <Cobe></Cobe>
+            <Cobe></Cobe>
         </div>
 
       </div>
