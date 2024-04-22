@@ -104,10 +104,8 @@
 html,
 :host {
   line-height: 1.5; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -moz-tab-size: 4; /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 2 */ /* 3 */
+  tab-size: 4; /* 3 */
   font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
@@ -405,11 +403,6 @@ textarea {
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
-}
 
 input::placeholder,
 textarea::placeholder {
@@ -2600,11 +2593,9 @@ video {
   min-width: 100%;
 }
 .min-w-max {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .min-w-min {
-  min-width: -moz-min-content;
   min-width: min-content;
 }
 .min-w-unit-10 {
@@ -2917,7 +2908,6 @@ video {
 }
 .select-none {
   -webkit-user-select: none;
-     -moz-user-select: none;
           user-select: none;
 }
 .resize-none {
@@ -2934,9 +2924,7 @@ video {
   list-style-type: none;
 }
 .appearance-none {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -3566,8 +3554,7 @@ video {
   background-size: 1.25rem 1.25rem;
 }
 .bg-clip-text {
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 .stroke-current {
   stroke: currentColor;
@@ -3576,8 +3563,7 @@ video {
   stroke: hsl(var(--nextui-default-300) / 0.5);
 }
 .object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .p-0 {
   padding: 0px;
@@ -4858,20 +4844,16 @@ video {
   background-size: 300%, 200%;
 }
 .\[mask-image\:linear-gradient\(to_left\2c white\2c transparent\)\] {
-  -webkit-mask-image: linear-gradient(to left,white,transparent);
-          mask-image: linear-gradient(to left,white,transparent);
+  mask-image: linear-gradient(to left,white,transparent);
 }
 .\[mask-image\:linear-gradient\(to_right\2c white\2c transparent\)\] {
-  -webkit-mask-image: linear-gradient(to right,white,transparent);
-          mask-image: linear-gradient(to right,white,transparent);
+  mask-image: linear-gradient(to right,white,transparent);
 }
 .\[mask-image\:linear-gradient\(to_top\2c white\2c transparent\)\] {
-  -webkit-mask-image: linear-gradient(to top,white,transparent);
-          mask-image: linear-gradient(to top,white,transparent);
+  mask-image: linear-gradient(to top,white,transparent);
 }
 .\[mask-image\:radial-gradient\(ellipse_at_100\%_0\%\2c black_10\%\2c var\(--transparent\)_70\%\)\] {
-  -webkit-mask-image: radial-gradient(ellipse at 100% 0%,black 10%,var(--transparent) 70%);
-          mask-image: radial-gradient(ellipse at 100% 0%,black 10%,var(--transparent) 70%);
+  mask-image: radial-gradient(ellipse at 100% 0%,black 10%,var(--transparent) 70%);
 }
 
 :root {
@@ -5101,8 +5083,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar-maskimage {
   --scroll-shadow-size: 40px;
-
-  -webkit-mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
   mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
 }
 
@@ -5120,15 +5100,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar-maskimage-left-right{
   --scroll-shadow-size: 40px;
-
-  -webkit-mask-image: linear-gradient(to right, #000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
   mask-image: linear-gradient(to right, #000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
 }
 
 .sidebar-maskimage-only-bottom {
   --scroll-shadow-size: 40px;
-
-  -webkit-mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
   mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
 }
 
@@ -5140,8 +5116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .contain img{
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
+  object-fit: contain !important;
 }
 
 
@@ -5200,14 +5175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #starfield{
   --scroll-shadow-size: 40px;
-
-  -webkit-mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
   mask-image: linear-gradient(#000, #000, transparent 0, #000 var(--scroll-shadow-size), #000 calc(100% - var(--scroll-shadow-size)), transparent);
-}
-
-.placeholder\:text-danger::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-danger) / var(--nextui-danger-opacity, var(--tw-text-opacity)));
 }
 
 .placeholder\:text-danger::placeholder {
@@ -5215,19 +5183,9 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--nextui-danger) / var(--nextui-danger-opacity, var(--tw-text-opacity)));
 }
 
-.placeholder\:text-foreground-500::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-foreground-500) / var(--nextui-foreground-500-opacity, var(--tw-text-opacity)));
-}
-
 .placeholder\:text-foreground-500::placeholder {
   --tw-text-opacity: 1;
   color: hsl(var(--nextui-foreground-500) / var(--nextui-foreground-500-opacity, var(--tw-text-opacity)));
-}
-
-.placeholder\:text-primary::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-primary) / var(--nextui-primary-opacity, var(--tw-text-opacity)));
 }
 
 .placeholder\:text-primary::placeholder {
@@ -5235,29 +5193,14 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--nextui-primary) / var(--nextui-primary-opacity, var(--tw-text-opacity)));
 }
 
-.placeholder\:text-secondary::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-secondary) / var(--nextui-secondary-opacity, var(--tw-text-opacity)));
-}
-
 .placeholder\:text-secondary::placeholder {
   --tw-text-opacity: 1;
   color: hsl(var(--nextui-secondary) / var(--nextui-secondary-opacity, var(--tw-text-opacity)));
 }
 
-.placeholder\:text-success-600::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-success-600) / var(--nextui-success-600-opacity, var(--tw-text-opacity)));
-}
-
 .placeholder\:text-success-600::placeholder {
   --tw-text-opacity: 1;
   color: hsl(var(--nextui-success-600) / var(--nextui-success-600-opacity, var(--tw-text-opacity)));
-}
-
-.placeholder\:text-warning-600::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-warning-600) / var(--nextui-warning-600-opacity, var(--tw-text-opacity)));
 }
 
 .placeholder\:text-warning-600::placeholder {
@@ -7484,33 +7427,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .data-\[top-bottom-scroll\=true\]\:\[mask-image\:linear-gradient\(\#000\2c \#000\2c transparent_0\2c \#000_var\(--scroll-shadow-size\)\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-top-bottom-scroll=true] {
-  -webkit-mask-image: linear-gradient(#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[top-scroll\=true\]\:\[mask-image\:linear-gradient\(0deg\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-top-scroll=true] {
-  -webkit-mask-image: linear-gradient(0deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(0deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(0deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[bottom-scroll\=true\]\:\[mask-image\:linear-gradient\(180deg\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-bottom-scroll=true] {
-  -webkit-mask-image: linear-gradient(180deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(180deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(180deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[left-scroll\=true\]\:\[mask-image\:linear-gradient\(270deg\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-left-scroll=true] {
-  -webkit-mask-image: linear-gradient(270deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(270deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(270deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[right-scroll\=true\]\:\[mask-image\:linear-gradient\(90deg\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-right-scroll=true] {
-  -webkit-mask-image: linear-gradient(90deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(90deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(90deg,#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[left-right-scroll\=true\]\:\[mask-image\:linear-gradient\(to_right\2c \#000\2c \#000\2c transparent_0\2c \#000_var\(--scroll-shadow-size\)\2c \#000_calc\(100\%_-_var\(--scroll-shadow-size\)\)\2c transparent\)\][data-left-right-scroll=true] {
-  -webkit-mask-image: linear-gradient(to right,#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
-          mask-image: linear-gradient(to right,#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
+  mask-image: linear-gradient(to right,#000,#000,transparent 0,#000 var(--scroll-shadow-size),#000 calc(100% - var(--scroll-shadow-size)),transparent);
 }
 
 .data-\[placement\=bottom-end\]\:before\:-top-\[calc\(theme\(spacing\.5\)\/4_-_1\.5px\)\][data-placement=bottom-end]::before {
@@ -8642,29 +8579,14 @@ h1, h2, h3, h4, h5, h6 {
   background-image: var(--dark-gradient),var(--aurora);
 }
 
-.dark\:placeholder\:text-danger-500:is(.dark *)::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-danger-500) / var(--nextui-danger-500-opacity, var(--tw-text-opacity)));
-}
-
 .dark\:placeholder\:text-danger-500:is(.dark *)::placeholder {
   --tw-text-opacity: 1;
   color: hsl(var(--nextui-danger-500) / var(--nextui-danger-500-opacity, var(--tw-text-opacity)));
 }
 
-.dark\:placeholder\:text-success:is(.dark *)::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-success) / var(--nextui-success-opacity, var(--tw-text-opacity)));
-}
-
 .dark\:placeholder\:text-success:is(.dark *)::placeholder {
   --tw-text-opacity: 1;
   color: hsl(var(--nextui-success) / var(--nextui-success-opacity, var(--tw-text-opacity)));
-}
-
-.dark\:placeholder\:text-warning:is(.dark *)::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: hsl(var(--nextui-warning) / var(--nextui-warning-opacity, var(--tw-text-opacity)));
 }
 
 .dark\:placeholder\:text-warning:is(.dark *)::placeholder {
