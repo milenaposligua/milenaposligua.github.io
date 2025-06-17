@@ -48,33 +48,33 @@ export const ControlSectionButtons = () => {
 
         <ButtonControl state={soundEnabled} onClick={toggleSound}>
           <ButtonParallaxTransparent className="flex flex-col items-center justify-center w-full h-full ">
-           {soundEnabled ?
+            {soundEnabled ?
 
-           <>
-           <Icon icon="solar:volume-loud-line-duotone" width="1.2em" height="1.2em" />
-           <span className="text-sm mt-2">{translate("sound_title_ON")}</span>
-           </>
+              <>
+                <Icon icon="solar:volume-loud-line-duotone" width="1.2em" height="1.2em" />
+                <span className="text-sm mt-2">{translate("sound_title_ON")}</span>
+              </>
 
-           :
-           <>
-           <Icon icon="solar:volume-cross-line-duotone" width="1.2em" height="1.2em" />
-            <span className="text-sm mt-2">{translate("sound_title_OFF")}</span>
-           </>
-           }
+              :
+              <>
+                <Icon icon="solar:volume-cross-line-duotone" width="1.2em" height="1.2em" />
+                <span className="text-sm mt-2">{translate("sound_title_OFF")}</span>
+              </>
+            }
 
           </ButtonParallaxTransparent>
         </ButtonControl>
 
         <ButtonControl state={false}>
           <ButtonParallaxTransparent className="flex flex-col items-center justify-center w-full h-full">
-          <Icon icon="solar:shield-cross-line-duotone" width="1.2em" height="1.2em" />
+            <Icon icon="solar:shield-cross-line-duotone" width="1.2em" height="1.2em" />
             <span className="text-sm mt-2">{translate("unvailable_title")}</span>
           </ButtonParallaxTransparent>
         </ButtonControl>
 
         <ButtonControl state={false}>
           <ButtonParallaxTransparent className="flex flex-col items-center justify-center w-full h-full">
-          <Icon icon="solar:shield-cross-line-duotone" width="1.2em" height="1.2em" />
+            <Icon icon="solar:shield-cross-line-duotone" width="1.2em" height="1.2em" />
             <span className="text-sm mt-2">{translate("unvailable_title")}</span>
           </ButtonParallaxTransparent>
         </ButtonControl>
@@ -90,7 +90,7 @@ export const LanguageSectionButtons = () => {
   const { translate, changeLanguage } = useTranslationContext();
 
   const selectedTranslation = useSelectedTranslation();
-  const [selectedTab, setSelectedTab] = useState(() => localStorage.getItem('language') || 'en')
+  const [selectedTab, setSelectedTab] = useState(() => localStorage.getItem('language') || 'es')
 
   useEffect(() => {
     changeLanguage(selectedTab);

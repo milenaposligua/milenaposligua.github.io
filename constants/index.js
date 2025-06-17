@@ -1,16 +1,15 @@
-export const navigationContent = (language) =>{
+export const navigationContent = (language) => {
   const content = [
     {
       id: 0,
       title: language("nav_about"),
-      url: ''
+      url: "",
     },
-  ]
-  return {content}
-}
+  ];
+  return { content };
+};
 
-
-export const formationContent = (language) =>{
+export const formationContent = (language) => {
   const content = [
     {
       title: language("cv_edu_title"),
@@ -34,9 +33,9 @@ export const formationContent = (language) =>{
         {
           title: language("cv_edu_formation_title_4"),
           description: language("cv_edu_formation_desc_4"),
-          time: "2022-2024",
+          time: "2025 - 2025",
         },
-      ]
+      ],
     },
     {
       title: language("cv_work_title"),
@@ -47,21 +46,7 @@ export const formationContent = (language) =>{
           description: "",
           time: "2019 - 2020",
         },
-        {
-          title: language("cv_work_formation_title_2"),
-          description: "",
-          time: "2019 - 2020",
-        },
-        {
-          title: language("cv_work_formation_title_3"),
-          description: "",
-          time: "2020 - 2020",
-        },
-        {
-          title: language("cv_work_formation_title_4"),
-          description: "",
-          time: "2020 - 2020",
-        },
+
         {
           title: language("cv_work_formation_title_5"),
           description: "",
@@ -76,10 +61,20 @@ export const formationContent = (language) =>{
           title: language("cv_work_formation_title_7"),
           description: "",
           time: "2023 - 2024",
-        }
-      ]
-    }
-  ]
+        },
+        {
+          title: language("cv_work_formation_title_2"),
+          description: "",
+          time: "2024 - 2024",
+        },
+        {
+          title: language("cv_work_formation_title_3"),
+          description: "",
+          time: "2024 - 2025",
+        },
+      ],
+    },
+  ];
 
-  return {content}
-}
+  return { content };
+};
